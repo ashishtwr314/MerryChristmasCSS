@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./styles.css" />
+  <style></style>
+  <script src=""></script>
+  <body>
+    <section>
+      <div class="box">
+        <div class="circle">
+          <h1>
+            Happy
+            <br />
+            Christmas
+          </h1>
+        </div>
+      </div>
+
+      <button type="button" class="red-btn">Red Mode</button>
+    </section>
+  </body>
+
+  <script>
+    var btn = document.querySelector(".red-btn");
+
+    function bubbles() {
+      var count = 200;
+      var section = document.querySelector("section");
+      var i = 0;
+      while (i < count) {
+        var bubble = document.createElement("i");
+        var x = Math.floor(Math.random() * window.innerWidth);
+        var y = Math.floor(Math.random() * window.innerHeight);
+        var size = Math.random() * 10;
+        bubble.style.left = x + "px";
+        bubble.style.top = y + "px";
+        bubble.style.width = 1 + size + "px";
+        bubble.style.height = 1 + size + "px";
+
+        bubble.style.animationDuration = 5 + size + "s";
+
+        section.appendChild(bubble);
+        i++;
+      }
+    }
+
+    function gotoRedMode() {
+      btn.classList.remove("white-btn");
+      btn.classList.add("red-btn");
+      btn.innerHTML = "Red Mode";
+
+      document.querySelector("section").style.backgroundColor = "#f1f1f1";
+
+      document.querySelectorAll("section i").forEach((dot) => {
+        dot.style.backgroundColor = "#ff2a2a";
+      });
+    }
+
+    function gotoWhiteMode() {
+      btn.classList.remove("red-btn");
+      btn.classList.add("white-btn");
+      btn.innerHTML = "White Mode";
+
+      document.querySelector("section").style.backgroundColor = "#ff2a2a";
+      document.querySelectorAll("section i").forEach((dot) => {
+        dot.style.backgroundColor = "whitesmoke";
+      });
+    }
+
+    bubbles();
+
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("red-btn")) {
+        gotoWhiteMode();
+      } else {
+        gotoRedMode();
+      }
+    });
+  </script>
+</html>
