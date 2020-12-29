@@ -73,6 +73,7 @@ body.scrollTrigger {
   left: 0;
   width: 100%;
   text-align: center;
+  letter-spacing: 5px;
   color: #fff;
   font-size: 120px;
   z-index: 9;

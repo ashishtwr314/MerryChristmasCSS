@@ -110,6 +110,9 @@ section i:nth-child(odd) {
   outline: 0;
   border: 0;
 }
+.red-btn.next-btn {
+  left: 90%;
+}
 .white-btn {
   position: absolute;
   left: 30px;
@@ -122,7 +125,3 @@ section i:nth-child(odd) {
   outline: 0;
   border: 0;
 }
-*/
-
-/* SCROLL TRIGEER CLASSES */
-

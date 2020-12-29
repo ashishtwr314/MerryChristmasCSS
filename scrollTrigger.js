@@ -1,3 +1,4 @@
+alert("Scroll to see the effect!");
 gsap.to("#moon", {
   scrollTrigger: {
     scrub: 1,
