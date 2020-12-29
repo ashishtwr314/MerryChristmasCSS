@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Satisfy", cursive;
+}
+body.scrollTrigger {
+  height: 200vh;
+}
+
+.scrollTrigger .section {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scrollTrigger .section .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.scrollTrigger .section .moon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scrollTrigger .section .cloud1 {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  max-width: 600px;
+  z-index: 2;
+}
+.scrollTrigger .section .cloud2 {
+  position: absolute;
+  top: 200px;
+  right: 50px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.scrollTrigger .section .santa {
+  position: absolute;
+  bottom: 50px;
+  left: -600px;
+  max-width: 600px;
+  z-index: 1;
+  transform: scale(0.5);
+}
+
+.scrollTrigger .section .tree {
+  z-index: 10;
+  background-image: url("./scrollAnimImages/tree.png");
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 266px;
+  background-position-y: 266px;
+}
+.scrollTrigger .section .text {
+  position: absolute;
+  bottom: -400px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #fff;
+  font-size: 120px;
+  z-index: 9;
+}
